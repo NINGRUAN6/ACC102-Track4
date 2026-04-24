@@ -1,26 +1,42 @@
-# ACC102 Python Data Product: WRDS Stock Analysis Tool
+# ACC102-Track4
+# Interactive Stock Analysis Dashboard
 
-## Overview
-Interactive stock analysis tool using WRDS CRSP database.
+This project is a Streamlit-based stock analysis dashboard that connects to **WRDS CRSP** data. Users can enter their WRDS login credentials, a stock ticker, and a start year to retrieve stock and market data, calculate financial metrics, and display visualizations in an interactive dashboard.
+
+---
 
 ## Features
-- Connect to WRDS account
-- Load daily stock prices and returns
-- Visualize price trend
-- Show descriptive statistics
 
-## Requirements
-- WRDS account
-- Python 3.10
-- streamlit, wrds, pandas, matplotlib
+The application provides the following functions:
 
-## How to Run
-pip install -r requirements.txt
-streamlit run app.py
+- WRDS login with username and password
+- Stock ticker input
+- Automatic lookup of **PERMNO** from `crsp.stocknames`
+- Daily stock data retrieval from `crsp.dsf`
+- Market return data retrieval from `crsp.dsi`
+- Data cleaning and processing
+- Interactive dashboard with four tabs:
+  - Overview
+  - Price & Return
+  - Volume & Distribution
+  - Market Comparison
 
-## Data Source
-WRDS CRSP Daily Stock File (dsf)
+---
 
-## Author 
-[Lingxin.Cai]
-[2473404]
+## Technologies Used
+
+- Python
+- Streamlit
+- WRDS
+- Pandas
+- Matplotlib
+
+---
+
+## Project Structure
+
+```bash
+.
+├── app.py
+├── README.md
+└── requirements.txt
